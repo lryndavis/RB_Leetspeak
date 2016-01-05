@@ -11,4 +11,13 @@ describe('String#leetspeak') do
   it('replaces every "o" in a string with "0"') do
     expect("boo boo".leetspeak).to(eq("b00 b00"))
   end
+  it('replaces every "s" in a string with a "z"') do
+    expect("roses".leetspeak).to(eq("r0z3z"))
+  end
+  it('replaces every "i" in a string with a "1"') do
+    expect("I like Ike".leetspeak).to(eq("1 l1k3 1k3"))
+  end
+  it('does NOT replace the first letter when it is an s') do
+  expect("sassafrass".leetspeak).to(eq("sazzafrazz"))
+  end
 end
